@@ -1,0 +1,10 @@
+At practice test:
+    - check pods running in the cluster
+    - check the pods creation details(k describe pod `podName`)
+    - delete pod
+    - create pod by yaml
+    - create pod by imperative command (k run `podName` --image=`imageName`)
+    - k get pods -o wide (check the node where the pod running)
+
+
+k edit pod `podName` - able to edit some props of the pod.
