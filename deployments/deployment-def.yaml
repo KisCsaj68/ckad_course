@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  labels:
+    app: myapp
+    type: backend
+spec:
+  selector:
+    matchLabels:
+      type: backend
+  template:
+    metadata:
+      name: my-pod
+      labels:
+        app: myapp
+        type: backend
+    spec:
+      containers:
+        - name: redis-container
+          image: redis
+  replicas: 3
